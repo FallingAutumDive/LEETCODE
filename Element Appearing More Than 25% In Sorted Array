@@ -1,0 +1,5 @@
+        n = len(arr)
+
+        for u in range(n - n/4):
+            if arr[u] == arr[u + n/4]:
+                return arr[u]
