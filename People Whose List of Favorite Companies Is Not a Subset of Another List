@@ -1,0 +1,13 @@
+        favorite_companies = [set(companies) for companies in favoriteCompanies]
+        result = []
+
+        for j, current_set in enumerate(favorite_companies):
+            is_subset = False 
+            for k, other_set in enumerate(favorite_companies):
+                if j != k and current_set.issubset(other_set):
+                    is_subset = True
+                    break
+            if not is_subset:
+                result.append(j)
+
+        return sorted(result)
