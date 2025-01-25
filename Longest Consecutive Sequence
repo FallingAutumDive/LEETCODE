@@ -1,0 +1,14 @@
+        number_set = set(nums)
+        long_streak = 0 
+
+        for num in number_set:
+            if num - 1 not in number_set:
+                current_number = num 
+                current_streak = 1 
+
+                while current_number + 1 in number_set:
+                    current_number += 1 
+                    current_streak += 1
+                
+                long_streak = max(long_streak, current_streak)
+        return long_streak
